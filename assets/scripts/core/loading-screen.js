@@ -178,7 +178,7 @@ class BootScene extends Phaser.Scene {
       "Programming amazing AI",
       "Hiding secret vault",
       "Spooky doesn't get out much",
-      "WebDasher was here",
+      "Rohan was here",
       "Warp Speed",
       "So, what's up?",
       "Hold on, reading the manual",
@@ -254,6 +254,25 @@ class BootScene extends Phaser.Scene {
       this.load.image("loadingCircle", "assets/sprites/loadingCircle.png");
       this.load.image("GJ_button01", "assets/sprites/GJ_button_01.png");
       this.load.image("GJ_button02", "assets/sprites/GJ_button_02.png");
+      this.load.image("GJ_button03", "assets/sprites/GJ_button_03.png");
+      this.load.image("GJ_button04", "assets/sprites/GJ_button_04.png");
+      this.load.image("GJ_button05", "assets/sprites/GJ_button_05.png");
+      this.load.image("GJ_button06", "assets/sprites/GJ_button_06.png");
+      this.load.image("import", "assets/sprites/import.png");
+      this.load.image("export", "assets/sprites/export.png");
+      this.load.image("tutorial_01", "assets/sprites/tutorial_01.png");
+      this.load.image("tutorial_02", "assets/sprites/tutorial_02.png");
+      this.load.image("tutorial_03", "assets/sprites/tutorial_03.png");
+      this.load.image("tutorial_04", "assets/sprites/tutorial_04.png");
+      this.load.image("tutorial_05", "assets/sprites/tutorial_05.png");
+      this.load.image("tab1", "assets/sprites/tab1.png");
+      this.load.image("tab2", "assets/sprites/tab2.png");
+      this.load.image("tab3", "assets/sprites/tab3.png");
+      this.load.image("tab4", "assets/sprites/tab4.png");
+      this.load.image("tab5", "assets/sprites/tab5.png");
+      this.load.image("GJ_moveBtn", "assets/sprites/GJ_moveBtn.png");
+      this.load.image("GJ_moveSBtn", "assets/sprites/GJ_moveSBtn.png");
+      this.load.image("slidergroove2", "assets/sprites/slidergroove2.png");
 
       for (let i = 1; i < 23; i++) {
         let index = i - 1;
@@ -296,7 +315,7 @@ class BootScene extends Phaser.Scene {
           if (bigFontData) loadFont(this, "bigFont", bigFontData);
           const gfd = this.cache.text.get("goldFontFnt");
           if (gfd && !this.cache.bitmapFont.has("goldFont")) loadFont(this, "goldFont", gfd);
-          if (window.gameCache) console.log('stats:', window.gameCache.getCacheStats());
+
           localStorage.setItem('webdash_assets_loaded', 'true');
           localStorage.setItem('webdash_last_load_time', Date.now().toString());
           this.scene.start("GameScene");
